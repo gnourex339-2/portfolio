@@ -1,0 +1,26 @@
+/** Single source of truth for personal info (brief §6). Edit here, not in components. */
+export const site = {
+  name: "Amine Benzerga",
+  role: "Cloud Engineer",
+  tagline: "Étudiant MIAGE — Cloud & Infrastructure",
+  location: "Nancy, France",
+  locationNote: "mobilité ouverte",
+  seeking: "Alternance Cloud Engineer — Rentrée 2026 (Master MIAGE)",
+  email: "aminebenzerga13@gmail.com",
+  phone: "+33 7 45 76 19 65",
+  github: "https://github.com/gnourex339-2",
+  linkedin: "https://www.linkedin.com/in/amine-benzerga339/",
+  cvUrl: "/cv.pdf", // drop the PDF in /public and keep this name
+  repoUrl: "https://github.com/gnourex339-2/portfolio", // footer signal for tech recruiters
+  languages: ["Français (natif)", "Anglais", "Arabe"],
+  /** The single "what I do" line — keywords revealed with measured delays (brief §4, Moment 1). */
+  focus: ["Cloud", "Infrastructure", "Data"],
+} as const;
+
+export const nav = [
+  { label: "À propos", href: "#about" },
+  { label: "Expérience", href: "#experience" },
+  { label: "Compétences", href: "#skills" },
+  { label: "Projets", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+] as const;
