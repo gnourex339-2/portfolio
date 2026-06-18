@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { nav, site } from "@/data/site";
-import { CodeMark } from "@/components/ui/CodeMark";
-import { DUR, EASE_OUT_EXPO } from "@/lib/motion";
-import { useActiveSection } from "@/hooks/useActiveSection";
+import { nav, site } from "../../data/site";
+import { CodeMark } from "../ui/CodeMark";
+import { DUR, EASE_OUT_EXPO } from "../../lib/motion";
+import { useActiveSection } from "../../hooks/useActiveSection";
 
 const SECTION_IDS = ["top", "about", "experience", "skills", "projects", "contact"];
 

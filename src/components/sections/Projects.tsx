@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Github, Pin, Plus, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Section } from "@/components/layout/Section";
-import { inView, riseIn, spring, stagger } from "@/lib/motion";
-import { projects, type Project } from "@/data/projects";
+import { Section } from "../layout/Section";
+import { inView, riseIn, spring, stagger } from "../../lib/motion";
+import { projects, type Project } from "../../data/projects";
 
 /** Asymmetric bento placement (brief §4, Moment 3) — keyed by slug for precise control. */
 const SPAN: Record<string, string> = {

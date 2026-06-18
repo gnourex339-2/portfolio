@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { EASE_OUT_EXPO } from "@/lib/motion";
+import { EASE_OUT_EXPO } from "../../lib/motion";
 
 /**
  * The `</>` signature from the CV, rebuilt as a graphic element (not text next to a name).

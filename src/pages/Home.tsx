@@ -1,13 +1,12 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { ScrollProgress } from "@/components/layout/ScrollProgress";
-import { Hero } from "@/components/sections/Hero";
-import { About } from "@/components/sections/About";
-import { Ascension } from "@/components/sections/Ascension";
-import { Experience } from "@/components/sections/Experience";
-import { Skills } from "@/components/sections/Skills";
-import { Projects } from "@/components/sections/Projects";
-import { Contact } from "@/components/sections/Contact";
+import { Header } from "../components/layout/Header";
+import { Footer } from "../components/layout/Footer";
+import { ScrollProgress } from "../components/layout/ScrollProgress";
+import { Hero } from "../components/sections/Hero";
+import { About } from "../components/sections/About";
+import { Experience } from "../components/sections/Experience";
+import { Skills } from "../components/sections/Skills";
+import { Projects } from "../components/sections/Projects";
+import { Contact } from "../components/sections/Contact";
 
 export function Home() {
   return (
@@ -17,7 +16,6 @@ export function Home() {
       <main id="main">
         <Hero />
         <About />
-        <Ascension />
         <Experience />
         <Skills />
         <Projects />

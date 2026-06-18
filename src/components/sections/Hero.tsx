@@ -1,9 +1,9 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
-import { site } from "@/data/site";
-import { CodeMark } from "@/components/ui/CodeMark";
-import { MagneticLink } from "@/components/ui/MagneticLink";
-import { DUR, EASE_OUT_EXPO } from "@/lib/motion";
+import { site } from "../../data/site";
+import { CodeMark } from "../ui/CodeMark";
+import { MagneticLink } from "../ui/MagneticLink";
+import { DUR, EASE_OUT_EXPO } from "../../lib/motion";
 
 /**
  * Signature moment 1 — editorial hero (brief §4).

@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { MapPin, GraduationCap, Target } from "lucide-react";
-import { Section } from "@/components/layout/Section";
-import { inView, riseIn, stagger } from "@/lib/motion";
-import { site } from "@/data/site";
+import { Section } from "../layout/Section";
+import { inView, riseIn, stagger } from "../../lib/motion";
+import { site } from "../../data/site";
 
 const facts = [
   { icon: GraduationCap, label: "Formation", value: "Licence 3 MIAGE — IDMC (Univ. de Lorraine)" },

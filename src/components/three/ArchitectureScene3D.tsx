@@ -8,7 +8,7 @@ import {
   ARCH_ROUTE,
   nodeById,
   type ArchNode,
-} from "@/data/architecture";
+} from "../../data/architecture";
 
 const COLORS = {
   slab: "#13233b",

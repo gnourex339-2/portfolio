@@ -2,13 +2,13 @@ import { useEffect } from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, Github } from "lucide-react";
-import { Footer } from "@/components/layout/Footer";
-import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
-import { CodeMark } from "@/components/ui/CodeMark";
-import { projects } from "@/data/projects";
-import { caseStudies } from "@/data/caseStudies";
-import { site } from "@/data/site";
-import { DUR, EASE_OUT_EXPO } from "@/lib/motion";
+import { Footer } from "../components/layout/Footer";
+import { ArchitectureDiagram } from "../components/sections/ArchitectureDiagram";
+import { CodeMark } from "../components/ui/CodeMark";
+import { projects } from "../data/projects";
+import { caseStudies } from "../data/caseStudies";
+import { site } from "../data/site";
+import { DUR, EASE_OUT_EXPO } from "../lib/motion";
 
 export function ProjectDetail() {
   const { slug = "" } = useParams();

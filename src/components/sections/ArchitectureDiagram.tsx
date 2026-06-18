@@ -1,10 +1,9 @@
 import { lazy, Suspense, useState } from "react";
 import { useReducedMotion } from "framer-motion";
-import { ARCH_NODES, ARCH_ROUTE, nodeById } from "@/data/architecture";
+import { ARCH_NODES, ARCH_ROUTE, nodeById } from "../../data/architecture";
 
 const ArchitectureScene3D = lazy(
-  () => import("@/components/three/ArchitectureScene3D"),
-);
+  () => import("../three/ArchitectureScene3D"),);
 
 /**
  * Signature moment 2 (brief §4) — the BATINNOV architecture as an animated

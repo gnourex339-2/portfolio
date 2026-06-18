@@ -2,7 +2,7 @@
 export const skillGroups = [
   {
     category: "Langages",
-    items: ["TypeScript", "Python", "SQL", "Bash"],
+    items: ["TypeScript", "Python", "SQL", "Bash","C","JAVA"],
   },
   {
     category: "Cloud & Infra",

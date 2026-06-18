@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Section } from "@/components/layout/Section";
-import { inView, riseIn, stagger } from "@/lib/motion";
-import { marqueeSkills, skillGroups } from "@/data/skills";
+import { Section } from "../layout/Section";
+import { inView, riseIn, stagger } from "../../lib/motion";
+import { marqueeSkills, skillGroups } from "../../data/skills";
 
 /** Infinite marquee (brief §3) — pure CSS transform loop, paused on hover & reduced-motion. */
 function Marquee() {

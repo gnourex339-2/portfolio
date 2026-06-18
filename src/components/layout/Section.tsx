@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { inView, riseIn, stagger } from "@/lib/motion";
+import { inView, riseIn, stagger } from "../../lib/motion";
 
 /**
  * Section wrapper with a consistent eyebrow + generous vertical rhythm (brief §3).

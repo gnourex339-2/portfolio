@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Home } from "@/pages/Home";
-import { ProjectDetail } from "@/pages/ProjectDetail";
+import { Home } from "./pages/Home";
+import { ProjectDetail } from "./pages/ProjectDetail";
 
 /** Scroll to a #hash target after client-side navigation (e.g. detail → /#projects). */
 function ScrollToHash() {

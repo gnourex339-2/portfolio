@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Linkedin, Mail, Phone } from "lucide-react";
-import { inView, riseIn, stagger } from "@/lib/motion";
-import { site } from "@/data/site";
+import { inView, riseIn, stagger } from "../../lib/motion";
+import { site } from "../../data/site";
 
 const links = [
   { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },

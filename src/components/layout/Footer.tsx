@@ -1,6 +1,6 @@
 import { Github } from "lucide-react";
-import { CodeMark } from "@/components/ui/CodeMark";
-import { site } from "@/data/site";
+import { CodeMark } from "../ui/CodeMark";
+import { site } from "../../data/site";
 
 export function Footer() {
   return (

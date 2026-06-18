@@ -150,6 +150,28 @@
   }
 }
 
+/* Bird wing flap — two engraved frames cross-toggled for a beat. */
+@keyframes bird-frame-a {
+  0%,
+  49.9% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bird-frame-b {
+  0%,
+  49.9% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+
 /* ------------------------------------------------------------------ */
 /* Reduced motion — disable non-essential animation                    */
 /* ------------------------------------------------------------------ */
