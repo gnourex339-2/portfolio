@@ -48,8 +48,6 @@ Aucun CMS, aucun backend. Tout le contenu est typé dans `src/data/` :
 | `src/data/caseStudies.ts`| Contenu des pages détail (contexte, décisions) |
 | `src/data/architecture.ts`| Nœuds & flux du diagramme 3D                  |
 
-> ⚠️ Le bouton « Télécharger le CV » pointe vers `/cv.pdf` — déposer le PDF dans `public/`.
-> L'image de partage social attend `public/og-image.png` (1200×630).
 
 ## Déploiement
 
