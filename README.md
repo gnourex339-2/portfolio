@@ -75,9 +75,3 @@ docker run -p 8080:80 portfolio   # http://localhost:8080
 - `nginx.conf` : fallback SPA, gzip, cache long sur les assets fingerprintés, en-têtes de
   sécurité. En production, servir derrière Cloudflare (DNS + WAF + TLS) ; décommenter HSTS
   si le TLS est terminé directement par Nginx.
-
-## Objectifs qualité
-
-- Lighthouse ≥ 95 (Performance / Accessibility / Best Practices / SEO).
-- Accessibilité : skip link, focus visible, ARIA, `prefers-reduced-motion` respecté.
-- Meta tags Open Graph pour le partage (LinkedIn).
