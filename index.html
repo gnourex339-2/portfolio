@@ -19,7 +19,7 @@
       property="og:description"
       content="Étudiant MIAGE en recherche d'alternance Cloud Engineer. Infrastructure cloud, Docker, CI/CD, Cloudflare."
     />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image" content="https://gnourex339-2.github.io/portfolio/og-image.png" />
     <meta property="og:locale" content="fr_FR" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -28,10 +28,26 @@
       name="twitter:description"
       content="Étudiant MIAGE en recherche d'alternance Cloud Engineer."
     />
-    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:image" content="https://gnourex339-2.github.io/portfolio/og-image.png" />
   </head>
   <body>
     <div id="root"></div>
+    <!-- SPA fallback decode (pairs with public/404.html) so deep links work on GitHub Pages -->
+    <script>
+      (function () {
+        var l = window.location;
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

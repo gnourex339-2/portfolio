@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Section } from "../layout/Section";
 import { inView, riseIn, spring, stagger } from "../../lib/motion";
 import { projects, type Project } from "../../data/projects";
+import { site } from "../../data/site";
 
 /** Asymmetric bento placement (brief §4, Moment 3) — keyed by slug for precise control. */
 const SPAN: Record<string, string> = {
@@ -111,6 +112,21 @@ function Card({ p, onOpen }: { p: Project; onOpen: (slug: string) => void }) {
             >
               Étude de cas <ArrowUpRight size={15} />
             </Link>
+          )}
+          {p.repo && (
+            <a
+              href={p.repo}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Code de ${p.title} sur GitHub`}
+              className={`ml-auto inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors ${
+                feature
+                  ? "text-cream/70 hover:bg-white/10 hover:text-cream"
+                  : "text-muted hover:bg-ink/5 hover:text-ink"
+              }`}
+            >
+              <Github size={16} />
+            </a>
           )}
         </div>
       </div>
@@ -230,6 +246,27 @@ export function Projects() {
         {projects.map((p) => (
           <Card key={p.slug} p={p} onOpen={setOpenSlug} />
         ))}
+      </motion.div>
+
+      {/* Link to all repos on GitHub */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={inView}
+        className="mt-10 flex justify-center"
+      >
+        <a
+          href={site.github}
+          target="_blank"
+          rel="noreferrer"
+          className="group inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
+        >
+          <Github size={16} /> Tous mes projets sur GitHub
+          <ArrowUpRight
+            size={15}
+            className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          />
+        </a>
       </motion.div>
 
       <AnimatePresence>

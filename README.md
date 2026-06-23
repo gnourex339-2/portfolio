@@ -53,9 +53,23 @@ Aucun CMS, aucun backend. Tout le contenu est typé dans `src/data/` :
 
 ## Déploiement
 
-Deux voies, au choix.
+### Voie actuelle — GitHub Pages (CI/CD via GitHub Actions)
 
-### 1. Voie simple — Cloudflare Pages / Vercel
+Le site est déployé automatiquement sur **GitHub Pages** à chaque push sur `main`,
+via le workflow `.github/workflows/deploy.yml` (build → upload → deploy).
+
+- **URL de production :** https://gnourex339-2.github.io/portfolio/
+- **Base path :** `/portfolio/` en production (config Vite), `/` en dev.
+- Le routing SPA (`/projects/:slug`) fonctionne grâce à `public/404.html` (technique
+  spa-github-pages) + le `basename` du router calé sur `import.meta.env.BASE_URL`.
+
+**Activation (une seule fois) :** Repo → **Settings → Pages → Source : GitHub Actions**.
+Ensuite chaque `git push origin main` déclenche le déploiement.
+
+> ⚠️ Le base path est `/portfolio/` car le repo s'appelle `portfolio`. S'il est renommé,
+> mettre à jour `base` dans `vite.config.ts` et les URLs OG dans `index.html`.
+
+### Voie simple — Cloudflare Pages / Vercel
 
 Build statique, déploiement en un clic.
 
@@ -64,7 +78,7 @@ Build statique, déploiement en un clic.
 - Le fallback SPA est géré par `public/_redirects` (Cloudflare Pages / Netlify) et
   `vercel.json` (Vercel).
 
-### 2. Voie démonstrative — Docker + Nginx derrière Cloudflare
+### Voie démonstrative — Docker + Nginx derrière Cloudflare
 
 C'est la voie qui illustre le mieux la compétence Cloud.
 

@@ -18,6 +18,9 @@ import {
  * Returns null under prefers-reduced-motion.
  */
 
+// Base path for public assets (matches Vite base: "/portfolio/" on Pages, "/" in dev).
+const BASE = import.meta.env.BASE_URL;
+
 type RevealCloud = {
   src: string;
   top: string;
@@ -32,12 +35,12 @@ type RevealCloud = {
 };
 
 const CLOUDS: RevealCloud[] = [
-  { src: "/cloud2.webp", top: "-12%", left: "-10%", w: 520, ex: -760, ey: -320, move: [0, 0.55], fade: [0.42, 0.6], scaleTo: 1.2 },
-  { src: "/cloud1.webp", top: "0%", left: "30%", w: 420, flip: true, ex: 120, ey: -780, move: [0.02, 0.62], fade: [0.46, 0.66], scaleTo: 1.18 },
-  { src: "/cloud2.webp", top: "-6%", left: "60%", w: 540, ex: 800, ey: -300, move: [0, 0.5], fade: [0.38, 0.56], scaleTo: 1.24 },
-  { src: "/cloud1.webp", top: "30%", left: "-12%", w: 460, ex: -860, ey: 70, move: [0.04, 0.6], fade: [0.46, 0.66], scaleTo: 1.18 },
-  { src: "/cloud2.webp", top: "26%", left: "38%", w: 560, flip: true, ex: 160, ey: -220, move: [0.06, 0.72], fade: [0.54, 0.74], scaleTo: 1.12 },
-  { src: "/cloud1.webp", top: "34%", left: "70%", w: 440, ex: 860, ey: 130, move: [0, 0.52], fade: [0.4, 0.58], scaleTo: 1.22 },
+  { src: `${BASE}cloud2.webp`, top: "-12%", left: "-10%", w: 520, ex: -760, ey: -320, move: [0, 0.55], fade: [0.42, 0.6], scaleTo: 1.2 },
+  { src: `${BASE}cloud1.webp`, top: "0%", left: "30%", w: 420, flip: true, ex: 120, ey: -780, move: [0.02, 0.62], fade: [0.46, 0.66], scaleTo: 1.18 },
+  { src: `${BASE}cloud2.webp`, top: "-6%", left: "60%", w: 540, ex: 800, ey: -300, move: [0, 0.5], fade: [0.38, 0.56], scaleTo: 1.24 },
+  { src: `${BASE}cloud1.webp`, top: "30%", left: "-12%", w: 460, ex: -860, ey: 70, move: [0.04, 0.6], fade: [0.46, 0.66], scaleTo: 1.18 },
+  { src: `${BASE}cloud2.webp`, top: "26%", left: "38%", w: 560, flip: true, ex: 160, ey: -220, move: [0.06, 0.72], fade: [0.54, 0.74], scaleTo: 1.12 },
+  { src: `${BASE}cloud1.webp`, top: "34%", left: "70%", w: 440, ex: 860, ey: 130, move: [0, 0.52], fade: [0.4, 0.58], scaleTo: 1.22 },
 ];
 
 function FloatingCloud({ c, p }: { c: RevealCloud; p: MotionValue<number> }) {
@@ -68,14 +71,14 @@ function Bird() {
   return (
     <div className="relative h-20 w-20">
       <img
-        src="/bird1.webp"
+        src={`${BASE}bird1.webp`}
         alt=""
         aria-hidden="true"
         draggable={false}
         className="absolute inset-0 h-full w-full animate-[bird-frame-a_0.42s_linear_infinite] object-contain"
       />
       <img
-        src="/bird2.webp"
+        src={`${BASE}bird2.webp`}
         alt=""
         aria-hidden="true"
         draggable={false}

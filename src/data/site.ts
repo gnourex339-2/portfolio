@@ -10,7 +10,7 @@ export const site = {
   phone: "+33 7 45 76 19 65",
   github: "https://github.com/gnourex339-2",
   linkedin: "https://www.linkedin.com/in/amine-benzerga339/",
-  cvUrl: "/cv.pdf", // drop the PDF in /public and keep this name
+  cvUrl: `${import.meta.env.BASE_URL}cv.pdf`, // PDF lives in /public; base-aware for GitHub Pages
   repoUrl: "https://github.com/gnourex339-2/portfolio", // footer signal for tech recruiters
   languages: ["Français (natif)", "Anglais", "Arabe"],
   /** The single "what I do" line — keywords revealed with measured delays (brief §4, Moment 1). */

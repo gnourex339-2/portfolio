@@ -53,18 +53,18 @@ export function Hero() {
 
         {/* Name — XXL, two lines, the mark integrated into the second */}
         <h1 className="font-display font-bold leading-[0.92] tracking-[-0.03em] text-ink">
-          <span className="block overflow-hidden">
+          <span className="block">
             <motion.span
-              className="block text-[clamp(3rem,9vw,8.5rem)] leading-[0.9]"
+              className="block pb-[0.08em] text-[clamp(3rem,9vw,8.5rem)] leading-[0.92]"
               {...rise(t.line1)}
             >
               Amine
             </motion.span>
           </span>
 
-          <span className="flex flex-wrap items-end gap-x-5 gap-y-2 overflow-hidden">
+          <span className="flex flex-wrap items-end gap-x-5 gap-y-2">
             <motion.span
-              className="block text-[clamp(3rem,9vw,8.5rem)] leading-[0.9] text-navy"
+              className="block pb-[0.08em] text-[clamp(3rem,9vw,8.5rem)] leading-[0.92] text-navy"
               {...rise(t.line2)}
             >
               Benzerga

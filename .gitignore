@@ -14,5 +14,7 @@ logs
 *.log
 npm-debug.log*
 
-# Dev screenshot scratch (scripts/shoot.mjs output)
+# Dev-only tooling (local debugging; not part of the app)
 scripts/_*.png
+scripts/shoot.mjs
+scripts/diag.mjs
