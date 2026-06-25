@@ -22,7 +22,7 @@ export const skillGroups = [
   },
   {
     category: "Outils",
-    items: ["Git", "n8n", "Linux", "Regex", "POO"],
+    items: ["Git", "n8n", "OpenAPI", "Regex", "Bruno", "Ngrok", "Let's Encrypt"],
   },
 ] as const;
 
