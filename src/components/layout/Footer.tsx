@@ -12,8 +12,11 @@ export function Footer() {
           <span className="font-display text-sm font-semibold text-cream">{site.name}</span>
         </div>
 
-        <p className="text-xs">
-          Construit avec React + Vite + Framer Motion. Déployé via Docker derrière Cloudflare.
+        <p className="max-w-md text-xs">
+          Construit avec React + Vite + Framer Motion. Hébergé sur GitHub Pages pour garder une
+          URL stable (le QR code de mon CV imprimé pointe dessus). Un déploiement Docker sur VPS
+          derrière Cloudflare — DNS, WAF, TLS, comme chez BATINNOV — est prêt et reste l'objectif
+          pour une vitrine plus démonstrative.
         </p>
 
         <a
