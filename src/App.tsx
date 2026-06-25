@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { ProjectDetail } from "./pages/ProjectDetail";
+import { ExpertiseDetail } from "./pages/ExpertiseDetail";
 
 /** Scroll to a #hash target after client-side navigation (e.g. detail → /#projects). */
 function ScrollToHash() {
@@ -27,6 +28,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
+        <Route path="/expertise/:slug" element={<ExpertiseDetail />} />
       </Routes>
     </>
   );

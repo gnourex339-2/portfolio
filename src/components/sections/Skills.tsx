@@ -1,7 +1,10 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Section } from "../layout/Section";
 import { inView, riseIn, stagger } from "../../lib/motion";
 import { marqueeSkills, skillGroups } from "../../data/skills";
+import { expertise } from "../../data/expertise";
 
 /** Infinite marquee (brief §3) — pure CSS transform loop, paused on hover & reduced-motion. */
 function Marquee() {
@@ -64,6 +67,39 @@ export function Skills() {
             </ul>
           </motion.div>
         ))}
+      </motion.div>
+
+      {/* Transverse competencies — framed as serving the cloud positioning, not a pivot. */}
+      <motion.div
+        variants={stagger(0.1)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={inView}
+        className="mt-12"
+      >
+        <motion.p variants={riseIn} className="mb-5 text-sm text-muted">
+          Au-delà de l'infra, trois compétences transverses qui la servent —{" "}
+          <span className="text-ink/70">explorez ce qu'elles couvrent et ce qui les prouve.</span>
+        </motion.p>
+        <div className="grid gap-4 sm:grid-cols-3">
+          {expertise.map((e) => (
+            <motion.div key={e.slug} variants={riseIn}>
+              <Link
+                to={`/expertise/${e.slug}`}
+                className="group flex h-full flex-col rounded-2xl border border-line bg-paper p-6 transition-colors hover:border-accent"
+              >
+                <span className="inline-flex items-center gap-1.5 font-display text-lg font-semibold text-ink">
+                  {e.label}
+                  <ArrowUpRight
+                    size={16}
+                    className="text-muted transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+                  />
+                </span>
+                <span className="mt-2 text-sm leading-relaxed text-muted">{e.title}</span>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
     </Section>
   );

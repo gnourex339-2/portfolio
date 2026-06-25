@@ -15,7 +15,18 @@ export const site = {
   languages: ["Français (natif)", "Anglais", "Arabe"],
   /** The single "what I do" line — keywords revealed with measured delays (brief §4, Moment 1). */
   focus: ["Cloud", "Infrastructure", "Data"],
+  /** Hosting region shown in the footer "live infra" line. Update when the VPS goes live. */
+  region: "github-pages",
 } as const;
+
+/**
+ * "En ce moment" (addendum §3.3) — short, factual, kept current.
+ * Edit these 2-3 lines every month or two; never pad with anything untrue.
+ */
+export const now = [
+  { label: "Recherche", value: "Alternance Cloud Engineer · rentrée 2026" },
+  { label: "Veille", value: "AWS · Terraform" },
+] as const;
 
 export const nav = [
   { label: "À propos", href: "#about" },

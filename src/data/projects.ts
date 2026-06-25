@@ -49,7 +49,7 @@ export const projects: Project[] = [
     ],
     size: "md",
     detail: true,
-    repo: "https://github.com/gnourex339-2",
+    repo: "https://github.com/gnourex339-2/parking",
     year: "2025",
   },
   {
@@ -65,8 +65,40 @@ export const projects: Project[] = [
       "Déploiement potentiel en cron / serverless",
     ],
     size: "md",
-    repo: "https://github.com/gnourex339-2",
+    repo: "https://github.com/gnourex339-2/AgoraeDate",
     year: "2025",
+  },
+  {
+    slug: "webs",
+    title: "WEBS",
+    tagline: "Visualiseur web temps réel de données de santé",
+    description:
+      "Application full-stack système : un daemon C++ émet des données de capteurs médicaux, un serveur Flask les lit via un pipe Unix (IPC) dans un thread dédié par patient — protégé par verrou — et un client JavaScript les affiche en temps réel avec Chart.js. Projet de Systèmes d'Exploitation (L3 MIAGE).",
+    stack: ["Python", "Flask", "C++", "IPC Unix", "Chart.js"],
+    highlights: [
+      "IPC par pipe Unix entre un daemon C++ et un serveur Flask",
+      "Lecture concurrente (thread par source + threading.Lock) sans bloquer le serveur",
+      "Flux temps réel : polling AJAX + graphes Chart.js à historique glissant",
+    ],
+    size: "md",
+    repo: "https://github.com/gnourex339-2/WEBS",
+    year: "2025",
+  },
+  {
+    slug: "worldcup-billeterie",
+    title: "WorldCup Billetterie",
+    tagline: "SPA de réservation de billets — Coupe du Monde 2026",
+    description:
+      "Application monopage qui consomme une API temps réel pour afficher matchs, stades et billets disponibles. État serveur géré avec TanStack Query (cache, synchronisation, états loading/error natifs), panier global via Context typé, et code-splitting des routes secondaires pour un chargement initial minimal.",
+    stack: ["TypeScript", "React", "Vite", "TanStack Query", "Axios"],
+    highlights: [
+      "État serveur avec TanStack Query (cache + staleTime, loading/error natifs)",
+      "Panier de réservation global (Context + custom hook typé)",
+      "Lazy-loading et code-splitting des routes secondaires",
+    ],
+    size: "md",
+    repo: "https://github.com/sam24-ds/Projet-Coupe-du-monde-",
+    year: "2026",
   },
   {
     slug: "vlauvegestion",
@@ -77,7 +109,7 @@ export const projects: Project[] = [
     stack: ["Python", "Tkinter", "MySQL", "POO"],
     highlights: ["Modélisation BDD", "Conception orientée objet"],
     size: "sm",
-    repo: "https://github.com/gnourex339-2",
+    repo: "https://github.com/gnourex339-2/VlauveGestion",
     year: "2024",
   },
 ];

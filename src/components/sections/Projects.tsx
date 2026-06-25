@@ -12,6 +12,8 @@ const SPAN: Record<string, string> = {
   batinnov: "lg:col-span-2 lg:row-span-2",
   "api-parking": "lg:col-span-1",
   agoraedate: "lg:col-span-1",
+  webs: "lg:col-span-2",
+  "worldcup-billeterie": "lg:col-span-1",
   vlauvegestion: "lg:col-span-3",
 };
 
