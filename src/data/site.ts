@@ -25,7 +25,7 @@ export const site = {
  */
 export const now = [
   { label: "Recherche", value: "Alternance Cloud Engineer · rentrée 2026" },
-  { label: "Veille", value: "AWS · Terraform" },
+  { label: "Veille", value: "AWS · Terraform · Hyper-V " },
 ] as const;
 
 export const nav = [
