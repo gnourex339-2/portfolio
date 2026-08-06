@@ -3,7 +3,7 @@
 Portfolio personnel, conçu comme une vitrine de compétences **Cloud Engineer**. La manière
 dont il est construit et déployé fait partie de la démonstration.
 
-**Live :** _(à compléter une fois déployé)_
+
 
 ---
 
